@@ -14,8 +14,8 @@ app.use(cors());
 
 const PORT = 8010;
 
-const MONGO_URL =
-  "mongodb+srv://niranjanamenon05:XtBz6RvIBIULioqX@cluster0.wczerg1.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+require("dotenv").config();
+const MONGO_URL = process.env.MONGO_URL;
 
 mongoose
     .connect(MONGO_URL)
